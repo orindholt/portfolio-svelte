@@ -7,3 +7,18 @@
 		@apply bg-tan text-black font-inter;
 	}
 }
+
+@layer components {
+	.backing::after,
+	.backing::before,
+	.backing > span {
+		@apply transition-transform duration-300 ease-in-out;
+	}
+	.backing::after,
+	.backing::before {
+		@apply content-[''] absolute -inset-1 rounded-md border-4 border-black pointer-events-none;
+	}
+	.backing {
+		@apply after:bg-orange lg:hover:after:-translate-x-1 lg:hover:after:-translate-y-1 before:bg-black lg:hover:before:translate-x-1 lg:hover:before:translate-y-1 lg:group-hover:translate-x-1;
+	}
+}

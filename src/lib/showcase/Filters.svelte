@@ -27,7 +27,7 @@
 <ul class="flex flex-wrap items-center">
 	{#each sections as section}
 		<li>
-			<button type="button" class="flex text-6xl font-light uppercase">
+			<button type="button" class="flex text-6xl font-light uppercase lg:hover:text-orange">
 				<span>{section.title}</span>
 				<span class="text-xs">{section.count}</span>
 				<span class="text-gray px-8 inline-block">/</span>

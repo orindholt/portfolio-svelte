@@ -8,10 +8,11 @@
 		<li class="text-2xl font-semibold mr-auto lg:flex-1">
 			<a href="/#top">Oliver Rindholt</a>
 		</li>
-		<div class="flex justify-evenly flex-1">
+		<div class="flex justify-evenly flex-2">
 			<NavbarLink href="#top">Sanctuary</NavbarLink>
 			<NavbarLink href="#showcase">Showcase</NavbarLink>
-			<NavbarLink href="#bio">Bio</NavbarLink>
+			<NavbarLink href="#skills">Skills</NavbarLink>
+			<NavbarLink href="#biography">Biography</NavbarLink>
 			<NavbarLink href="#chat">Chat</NavbarLink>
 		</div>
 		<div class="flex gap-4">
