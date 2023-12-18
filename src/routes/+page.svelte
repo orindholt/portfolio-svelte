@@ -11,10 +11,10 @@
 
 <ToTop />
 <div
-	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] pb-navbar flex flex-col justify-center gap-4"
+	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] pb-navbar flex flex-col justify-evenly sm:justify-center gap-4"
 >
 	<div class="flex items-center justify-between h-full" id="top">
-		<h1 class="text-6xl xl:text-7xl font-bold uppercase gap-6 !leading-tight">
+		<h1 class="text-5xl sm:text-6xl xl:text-7xl font-bold uppercase gap-6 !leading-tight">
 			Fullstack Web-<br />
 			developer
 		</h1>
