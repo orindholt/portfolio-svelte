@@ -11,10 +11,10 @@
 
 <ToTop />
 <div
-	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] pb-navbar flex flex-col justify-center gap-4"
+	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] pb-navbar flex flex-col justify-evenly sm:justify-center gap-4"
 >
 	<div class="flex items-center justify-between h-full" id="top">
-		<h1 class="text-6xl xl:text-7xl font-bold uppercase gap-6 !leading-tight">
+		<h1 class="text-5xl sm:text-6xl xl:text-7xl font-bold uppercase gap-6 !leading-tight">
 			Fullstack Web-<br />
 			developer
 		</h1>
@@ -50,10 +50,12 @@
 	</div>
 </Section>
 <Section title="About me" id="bio" class="space-y-4">
-	<h3 class="font-semibold text-center text-xl">
-		<span class="text-4xl font-bold">👋 Hello! I'm Oliver,</span><br /> a Junior Web Developer and CSS
-		magician based in the outskirts of Copenhagen.
+	<h3 class="text-4xl font-bold text-center">
+		<span class="text-4xl font-bold">👋<br class="sm:hidden" /> Hello! I'm Oliver</span>
 	</h3>
+	<h4 class="font-semibold text-center text-xl">
+		a Junior Web Developer and CSS magician based in the outskirts of Copenhagen.
+	</h4>
 	<div class="space-y-4 leading-snug">
 		<p>
 			My daily routine involves crafting fullstack responsive web applications. With over 2 years of
@@ -64,9 +66,7 @@
 		<p>
 			Although I might be a junior in the job market, my ability to collaborate shines. I've
 			successfully worked with graphic designers, managers, product owners, and fellow programmers
-			on various web applications. My technical expertise includes HTML, CSS Javascript, Typescript,
-			SASS, Tailwind, React.js, Next.js, Sveltekit, Vue, Nuxt.js, MongoDB, Supabase, Parse,
-			Firebase, and much more.
+			on various web applications.
 		</p>
 		<p>
 			I excel in learning new technologies and languages, documenting processes, and building
