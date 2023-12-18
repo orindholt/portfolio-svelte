@@ -9,7 +9,8 @@ export default {
 			black: "#1E1E1E",
 			orange: "#CF6048",
 			transparent: "transparent",
-			inherit: "inherit"
+			inherit: "inherit",
+			current: "currentColor"
 		},
 		fontFamily: {
 			lexend: ["Lexend Deca", "Inter", "sans-serif"],
@@ -19,6 +20,10 @@ export default {
 			spacing: {
 				navbar: "6rem",
 				page: "4rem"
+			},
+			flex: {
+				2: "2 2 0%",
+				3: "3 3 0%"
 			}
 		}
 	},
