@@ -17,7 +17,7 @@
 {#if y > 50}
 	<button
 		type="button"
-		class="fixed bottom-page right-page lg:hover:scale-105 lg:active:scale-100 transition-transform text-black"
+		class="fixed bottom-page right-page lg:hover:scale-105 lg:active:scale-100 transition-transform text-orange"
 		on:click={scrollToTop}
 	>
 		<svg
