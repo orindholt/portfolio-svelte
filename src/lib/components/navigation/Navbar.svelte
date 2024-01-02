@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Hr from "$lib/components/Hr.svelte";
-	import Notification from "../Notification.svelte";
+	import Button from "../Button.svelte";
 	import NavbarLink from "./NavbarLink.svelte";
 
 	let isOpen: boolean = false;
@@ -15,15 +15,13 @@
 </script>
 
 <nav class="md:px-page h-navbar fixed top-0 inset-x-0 flex flex-col bg-tan text-black z-50">
-	<Notification>
+	<!-- <Notification>
 		This website is still under construction. Some features may not work as intended.
-	</Notification>
+	</Notification> -->
 	<ul
 		class="text-4xl md:text-base my-auto font-bold flex items-center max-md:px-[calc(theme(spacing.page)/2)]"
 	>
-		<li class="text-2xl font-semibold mr-auto lg:flex-1">
-			<a href="/#top">Oliver Rindholt</a>
-		</li>
+		<li class="text-2xl font-semibold mr-auto lg:flex-1">Oliver Rindholt</li>
 		<div
 			class="flex max-md:flex-col justify-center md:justify-evenly max-md:items-center max-md:gap-12 flex-2 max-md:fixed max-md:inset-0 max-md:transition-transform max-md:duration-500 max-md:ease-in-out max-md:bg-black max-md:bg-opacity-90 max-md:backdrop-blur-sm max-md:text-tan {isOpen
 				? 'max-md:translate-x-0'
@@ -32,7 +30,8 @@
 			<NavbarLink on:navigation={onNavigation} href="#top">Sanctuary</NavbarLink>
 			<NavbarLink on:navigation={onNavigation} href="#showcase">Showcase</NavbarLink>
 			<NavbarLink on:navigation={onNavigation} href="#experience">Experience</NavbarLink>
-			<NavbarLink on:navigation={onNavigation} href="#bio">Biography</NavbarLink>
+			<NavbarLink on:navigation={onNavigation} href="#bio">Bio</NavbarLink>
+			<NavbarLink on:navigation={onNavigation} href="#chat">Chat</NavbarLink>
 			<!-- <NavbarLink href="#chat">Chat</NavbarLink> -->
 		</div>
 		<button type="button" class="relative z-10 w-8 h-8 md:hidden" on:click={toggleMenu}>
