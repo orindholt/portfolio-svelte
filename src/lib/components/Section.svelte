@@ -6,6 +6,6 @@
 </script>
 
 <section {id} class={twMerge("py-6 border-t-2 border-gray", $$restProps.class ?? "")}>
-	<h2 class="uppercase text-gray text-2xl font-semibold text-center mb-4">{title}</h2>
+	<h2 class="text-2xl mb-4 text-center">{title}</h2>
 	<slot />
 </section>

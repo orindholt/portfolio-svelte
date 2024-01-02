@@ -3,7 +3,7 @@
 	import ReferrerArrow from "./ReferrerArrow.svelte";
 
 	export let social: Socials;
-	export let size: number = 50;
+	export let size: number = 35;
 
 	$: arrowSize = Math.floor(size / 2);
 </script>

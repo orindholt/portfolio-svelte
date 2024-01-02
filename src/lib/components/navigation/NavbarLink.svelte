@@ -5,19 +5,24 @@
 
 	let dispatch = createEventDispatcher();
 
-	function handleClick() {
-		// Dispatch a custom event named "foo" with some data
-		dispatch("navigation", { message: "Custom event triggered!" });
-	}
-
 	function scrollIntoView() {
-		const el = document.querySelector(href);
+		const el = document.querySelector(href) as HTMLElement | null;
 		if (!el) return;
-		handleClick();
-		el.scrollIntoView({
-			behavior: "smooth",
-			block: "center"
+
+		dispatch("navigation");
+
+		const navElm = document.querySelector("nav");
+		// extra 2 pixels to account for border
+		const navHeight = navElm ? navElm.offsetHeight - 2 : 0;
+
+		window.scrollTo({
+			top: el.id === "top" ? 0 : Math.max(0, el.offsetTop - navHeight),
+			behavior: "smooth"
 		});
+		/* el.scrollIntoView({
+			behavior: "smooth",
+			block: el.id === "top" ? "end" : "start"
+		}); */
 	}
 </script>
 

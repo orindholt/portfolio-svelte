@@ -13,7 +13,7 @@
 	<div use:accordion={toggled}>
 		<slot />
 	</div>
-	<Button class="mx-auto" on:click={toggle}>
+	<Button class="mx-auto text-orange" on:click={toggle}>
 		{!toggled ? "Read More" : "Read Less"}
 	</Button>
 </div>

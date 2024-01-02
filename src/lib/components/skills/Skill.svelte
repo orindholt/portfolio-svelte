@@ -44,7 +44,7 @@
 		</svg>
 		{#if skill.name}
 			<h4
-				class="text-[1.5em] leading-none font-semibold font-lexend max-sm:hidden"
+				class="text-[1.5em] leading-none font-semibold font-lexend max-sm:hidden normal-case"
 				style="color: {skill.textColor ?? (isGradient ? skill.logoColor.at(-1) : skill.logoColor)}"
 			>
 				{skill.name}
