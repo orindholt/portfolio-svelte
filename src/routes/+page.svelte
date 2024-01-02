@@ -49,13 +49,13 @@
 		</ul>
 	</div>
 </Section>
-<Section title="About me" id="bio" class="space-y-8">
-	<h3 class="font-semibold text-center text-xl !leading-loose normal-case">
-		<span class="text-4xl font-bold text-black">👋 Hello! I'm Oliver,</span><br /> a Junior Web Developer
-		and CSS magician based in the outskirts of Copenhagen.
+<Section title="About me" id="bio" class="space-y-4">
+	<h3 class="font-semibold text-center text-xl">
+		<span class="text-4xl font-bold">👋 Hello! I'm Oliver,</span><br /> a Junior Web Developer and CSS
+		magician based in the outskirts of Copenhagen.
 	</h3>
-	<div class="flex gap-8">
-		<p class="flex-2">
+	<div class="space-y-4 leading-snug">
+		<p>
 			My daily routine involves crafting fullstack responsive web applications. With over 2 years of
 			hands-on knowledge gained through studying web development in my free time and at Roskilde
 			Technical School, I take pride in writing clean, appealing, and reusable code that's easy for
@@ -63,8 +63,11 @@
 
 			Although I might be a junior in the job market, my ability to collaborate shines. I've
 			successfully worked with graphic designers, managers, product owners, and fellow programmers
-			on various web applications.<br /><br />
-
+			on various web applications. My technical expertise includes HTML, CSS Javascript, Typescript,
+			SASS, Tailwind, React.js, Next.js, Sveltekit, Vue, Nuxt.js, MongoDB, Supabase, Parse,
+			Firebase, and much more.
+		</p>
+		<p>
 			I excel in learning new technologies and languages, documenting processes, and building
 			responsive frontend solutions by interacting with the backend through APIs and databases. I
 			have a focus on modern technology, but adept at seamlessly integrating and adapting to older

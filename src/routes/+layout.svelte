@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Portfolio</title>
+	<title>Oliver Rindholt</title>
 </svelte:head>
 
 <Navbar />
