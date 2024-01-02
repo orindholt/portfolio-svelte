@@ -49,13 +49,13 @@
 		</ul>
 	</div>
 </Section>
-<Section title="About me" id="bio" class="space-y-8">
-	<h3 class="font-semibold text-center text-xl !leading-loose normal-case">
-		<span class="text-4xl font-bold text-black">👋 Hello! I'm Oliver,</span><br /> a Junior Web Developer
-		and CSS magician based in the outskirts of Copenhagen.
-	</h3>
+<Section title="About me" id="bio" class="space-y-4">
+	<h3 class="font-bold text-center text-4xl text-black normal-case">👋 Hello! I'm Oliver</h3>
+	<h4 class="text-xl text-center">
+		a Junior Web Developer and CSS magician based in the outskirts of Copenhagen.
+	</h4>
 	<div class="flex gap-8">
-		<p class="flex-2">
+		<p class="md:flex-2">
 			My daily routine involves crafting fullstack responsive web applications. With over 2 years of
 			hands-on knowledge gained through studying web development in my free time and at Roskilde
 			Technical School, I take pride in writing clean, appealing, and reusable code that's easy for
@@ -73,7 +73,7 @@
 			Described by classmates, coworkers, and myself as a team player, trusted ally, and quick
 			learner.
 		</p>
-		<div class="flex-1 flex items-center">
+		<div class="flex-1 flex items-center max-md:hidden">
 			<img src="/images/me.jpg" alt="Me myself and I" class="rounded-3xl" />
 		</div>
 	</div>
@@ -117,7 +117,7 @@
 		<Input label="Message" name="message" placeholder="Your message to me..." />
 		<Button type="submit">Send</Button>
 	</form> -->
-	<h3>For now you can contact me on</h3>
+	<h3 class="text-center">For now you can contact me on</h3>
 	<a
 		class="font-semibold lg:hover:text-orange transition-colors text-xl"
 		href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a
