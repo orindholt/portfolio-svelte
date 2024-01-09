@@ -2,6 +2,7 @@
 	import { hexToRgb, shadeColor } from "$lib/util/functions";
 	import type { Skill } from "$lib/util/types";
 
+	export let slug: string;
 	export let skill: Skill;
 
 	const isGradient = Array.isArray(skill.logoColor);
@@ -15,7 +16,7 @@
 		-10
 	)}, {skill.backgroundColor}, {shadeColor(skill.backgroundColor, 10)});"
 >
-	<a href="#showcase?tag={skill.slug}" class="w-full h-14 flex gap-2 justify-center items-center">
+	<a href="#showcase?tag={slug}" class="w-full h-14 flex gap-2 justify-center items-center">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox={skill.svg.viewBox}

@@ -9,7 +9,6 @@ export interface Skill {
 	logoColor: string | string[];
 	standaloneColor: string;
 	textColor?: string;
-	slug: string;
 	svg: Svg;
 }
 
