@@ -24,6 +24,16 @@ export default {
 			flex: {
 				2: "2 2 0%",
 				3: "3 3 0%"
+			},
+			animation: {
+				wave: "wave 5s ease-in-out infinite"
+			},
+			keyframes: {
+				wave: {
+					"0%, 80%, 100%": { transform: "initial" },
+					"20%, 50%": { transform: "rotate(10deg)" },
+					"35%, 65%": { transform: "rotate(-8deg)" }
+				}
 			}
 		}
 	},

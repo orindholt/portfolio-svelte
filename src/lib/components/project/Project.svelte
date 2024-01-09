@@ -14,10 +14,10 @@
 >
 	<div
 		style="opacity: {isInViewport ? 1 : 0}; transform: translateY(-{isInViewport ? 0 : 50}px);"
-		class="bg-white bg-opacity-50 rounded-md p-4 flex flex-col gap-2 shadow-sm lg:hover:shadow-md lg:hover:bg-opacity-100 transition-all ease-in-out duration-700 group/project h-full"
+		class="bg-white bg-opacity-50 rounded-md p-4 flex flex-col gap-4 shadow-sm lg:hover:shadow-md lg:hover:bg-opacity-100 transition-all ease-in-out duration-700 group/project h-full"
 	>
-		<div class="flex items-center gap-4">
-			<h3 class="font-semibold text-lg leading-none text-black">{project.title}</h3>
+		<div class="flex items-center gap-3">
+			<h3 class="font-bold text-lg leading-none text-black normal-case">{project.title}</h3>
 			<ul class="flex flex-wrap gap-2">
 				{#each project.tags as tag}
 					<li style="color: {tag.standaloneColor};" class="group/tag">
