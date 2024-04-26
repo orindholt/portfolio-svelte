@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { cn } from "$lib/util/functions";
+
 	export let href: string;
 
 	import { createEventDispatcher } from "svelte";
@@ -26,9 +28,15 @@
 	}
 </script>
 
-<li class="relative group/link uppercase">
-	<a {href} on:click|preventDefault={scrollIntoView} class="h-full block"><slot /></a>
+<li class={cn("relative group/link uppercase md:flex-1", $$restProps.class)}>
+	<a
+		{href}
+		on:click|preventDefault={scrollIntoView}
+		class="w-full h-full lg:hover:text-orange-500 transition-colors flex justify-center"
+	>
+		<slot />
+	</a>
 	<div
-		class="absolute -bottom-2 inset-x-0 h-0.5 bg-gray mx-auto transition-all w-0 lg:group-hover/link:w-full ease-in-out duration-300"
+		class="absolute -bottom-2 inset-x-0 h-0.5 bg-gray-normal mx-auto transition-all w-0 lg:group-hover/link:w-full ease-in-out duration-300"
 	/>
 </li>

@@ -12,7 +12,7 @@
 {#if !hasSeen}
 	<aside
 		transition:fly={{ y: -10, duration: 500, easing: quintOut }}
-		class="bg-orange text-white p-1 text-sm fixed inset-x-0 top-0 z-10 flex justify-between items-center max-md:hidden"
+		class="bg-orange-500 text-white p-1 text-sm fixed inset-x-0 top-0 z-10 flex justify-between items-center max-md:hidden"
 	>
 		<p><slot /></p>
 		<button type="button" on:click={toggle}>

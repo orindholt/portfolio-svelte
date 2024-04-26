@@ -31,7 +31,7 @@
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 		transition:fade
-		class="rounded-full w-10 h-10 fixed top-0 left-0 z-50 pointer-events-none transition-all ease-out duration-700 text-gray"
+		class="rounded-full w-10 h-10 fixed top-0 left-0 z-50 pointer-events-none transition-all ease-out duration-700 text-gray-normal"
 		style="left:{Math.max(coords.x - 16, 0)}px; top:{Math.max(coords.y - 16, 0)}px"
 	>
 		<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2" />

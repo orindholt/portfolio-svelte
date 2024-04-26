@@ -1,3 +1,10 @@
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: any[]) {
+	return twMerge(clsx(inputs));
+}
+
 export function shadeColor(color: string, percent: number) {
 	let R = parseInt(color.substring(1, 3), 16);
 	let G = parseInt(color.substring(3, 5), 16);

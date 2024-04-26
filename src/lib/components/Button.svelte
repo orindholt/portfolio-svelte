@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { twMerge } from "tailwind-merge";
+	import { cn } from "$lib/util/functions";
 	import type { ButtonType } from "$lib/util/types";
 
 	export let type: ButtonType = "button";
@@ -12,14 +12,10 @@
 	type={href ? undefined : type}
 	href={href || undefined}
 	on:click
-	class={twMerge(
-		"relative px-4 py-2 text-2xl group/button backing font-medium !leading-none uppercase",
+	class={cn(
+		"relative px-[1.25em] py-[0.5em] text-xl group/button font-semibold !leading-none uppercase bg-orange-500 text-white rounded-lg border-2 lg:hover:bg-transparent lg:hover:text-orange-500 border-orange-500 transition-colors",
 		$$restProps.class ?? ""
 	)}
 >
-	<span
-		class="inline-block relative z-[1] lg:group-hover/button:-translate-x-1 lg:group-hover/button:-translate-y-1 will-change-transform"
-	>
-		<slot />
-	</span>
+	<span class="relative -top-px font-semibold"><slot /></span>
 </svelte:element>

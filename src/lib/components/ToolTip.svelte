@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { twMerge } from "tailwind-merge";
+	import { cn } from "$lib/util/functions";
 
 	export let tip: string = "";
 </script>
 
-<div class={twMerge("relative group/tip", $$restProps.class ?? "")}>
+<div class={cn("relative group/tip", $$restProps.class ?? "")}>
 	<slot />
 	<div
 		class="absolute top-full left-1/2 -translate-x-1/2 mx-auto w-fit pt-1 lg:group-hover/tip:opacity-100 opacity-0 lg:group-hover/tip:translate-y-0 -translate-y-1.5 transition-all duration-300 ease-in-out pointer-events-none"
@@ -24,8 +24,10 @@
 				d="m13.99.99c-.43-.62-1.18-.99-2.01-.99s-1.58.37-2.01.99L0,15.42h1.22S10.8,1.56,10.8,1.56c.48-.69,1.89-.69,2.37,0l9.56,13.82h1.21S13.99.99,13.99.99Z"
 			/>
 		</svg>
-		<p class="bg-black rounded-md py-2 px-4 text-white">
-			{tip}
-		</p>
+		{#if tip}
+			<div class="bg-black rounded-md py-2 px-4 text-white">
+				{tip}
+			</div>
+		{/if}
 	</div>
 </div>
