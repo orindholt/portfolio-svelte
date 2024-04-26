@@ -4,7 +4,6 @@
 	import Node from "$lib/components/experience/Node.svelte";
 	import ToTop from "$lib/components/navigation/ToTop.svelte";
 	import Project from "$lib/components/project/Project.svelte";
-	import SkillScroll from "$lib/components/skills/SkillScroll.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
 	import { EXPERIENCE, PROJECTS, Socials } from "../lib/util/constants";
 </script>
@@ -24,7 +23,7 @@
 		<SocialLink social={Socials.LINKEDIN} />
 		<SocialLink social={Socials.STACKOVERFLOW} />
 	</div>
-	<SkillScroll />
+	<!-- <SkillScroll /> -->
 	<!-- <ScrollDown /> -->
 </div>
 <Section title="Showcase" id="showcase">
