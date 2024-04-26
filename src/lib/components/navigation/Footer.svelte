@@ -3,7 +3,7 @@
 	import { CONTACT_EMAIL, Socials } from "../../util/constants";
 </script>
 
-<footer class="h-24 bg-black text-white flex flex-col items-center justify-between py-4">
+<footer class="h-24 bg-white text-black flex flex-col items-center justify-between py-4">
 	<ul class="flex gap-4">
 		<li>
 			<SocialLink size={28} social={Socials.GITHUB} />
@@ -15,7 +15,7 @@
 			<SocialLink size={28} social={Socials.STACKOVERFLOW} />
 		</li>
 	</ul>
-	<a class="font-semibold lg:hover:text-orange transition-colors" href="mailto:{CONTACT_EMAIL}"
+	<a class="font-semibold lg:hover:text-orange-500 transition-colors" href="mailto:{CONTACT_EMAIL}"
 		>{CONTACT_EMAIL}</a
 	>
 </footer>

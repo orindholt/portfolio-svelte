@@ -8,10 +8,10 @@
 	export let name: string;
 </script>
 
-<div class="flex flex-col gap-2 {$$restProps.class ?? ''}">
-	<label class="text-black" for={name}>{label}</label>
+<div class="flex flex-col gap-0.5 md:gap-2 {$$restProps.class ?? ''}">
+	<label class="text-gray-darker" for={name}>{label}</label>
 	<input
-		class="bg-black focus:bg-orange focus:outline-none transition-colors placeholder:text-gray text-white p-2 rounded-sm"
+		class="p-2 border-2 border-gray-normal focus:border-gray-dark bg-transparent outline-none transition-all placeholder:text-gray-dark text-black rounded-md"
 		{type}
 		id={name}
 		{name}

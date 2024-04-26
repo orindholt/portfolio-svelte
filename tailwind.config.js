@@ -4,21 +4,44 @@ export default {
 	theme: {
 		colors: {
 			white: "#FFFFFF",
-			tan: "#F1EEE9",
-			gray: "#C7C4C0",
-			black: "#1E1E1E",
-			orange: "#CF6048",
+			gray: {
+				50: "#f7f7f7",
+				100: "#efefef",
+				200: "#dcdcdc",
+				300: "#bdbdbd",
+				400: "#595959",
+				500: "#474747",
+				600: "#363636",
+				700: "#262626",
+				800: "#1c1c1c",
+				900: "#1a1a1a",
+				950: "#0f0f0f"
+			},
+			black: "#0a0a0a",
+			orange: {
+				50: "#fff4ed",
+				100: "#ffe5d4",
+				200: "#ffc8a9",
+				300: "#ff9966",
+				400: "#fe6f39",
+				500: "#fc4913",
+				600: "#ed2f09",
+				700: "#c51f09",
+				800: "#9c1a10",
+				900: "#7e1810",
+				950: "#440906"
+			},
 			transparent: "transparent",
 			inherit: "inherit",
 			current: "currentColor"
 		},
 		fontFamily: {
-			lexend: ["Lexend Deca", "Inter", "sans-serif"],
-			inter: ["Inter", "Lexend Deca", "sans-serif"]
+			lexend: ["Lexend Deca", "Source Sans 3", "sans-serif"],
+			"source-sans": ["Source Sans 3", "Lexend Deca", "sans-serif"]
 		},
 		extend: {
 			spacing: {
-				navbar: "6rem",
+				navbar: "5rem",
 				page: "4rem"
 			},
 			flex: {

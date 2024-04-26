@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { twMerge } from "tailwind-merge";
+	import { cn } from "$lib/util/functions";
 	export let size: number = 25;
 
 	$: maxedSize = Math.max(size, 16);
@@ -7,13 +7,12 @@
 </script>
 
 <svg
-	class={twMerge(
-		"lg:group-hover/ref:translate-x-1/4 lg:group-hover/ref:-translate-y-1/4 lg:group-hover/ref:opacity-100 opacity-0 transition-all absolute top-full left-full block",
+	class={cn(
+		"lg:group-hover/ref:translate-x-1/4 lg:group-hover/ref:-translate-y-1/4 lg:group-hover/ref:opacity-100 opacity-0 transition-all absolute top-full left-full block lg:group-hover/ref:stroke-orange-500 stroke-black",
 		$$restProps.class ?? ""
 	)}
 	fill="none"
 	shape-rendering="geometricPrecision"
-	stroke="currentColor"
 	stroke-linecap="round"
 	stroke-linejoin="round"
 	stroke-width={strokeWidth}

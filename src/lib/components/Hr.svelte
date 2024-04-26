@@ -1,1 +1,1 @@
-<hr class="border-gray border" />
+<hr class="border-gray-600 border" />

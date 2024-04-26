@@ -2,6 +2,7 @@
 	import viewport from "$lib/actions/useViewportAction";
 	import ToolTip from "$lib/components/ToolTip.svelte";
 	import type { Project } from "$lib/util/types";
+	import Box from "../Box.svelte";
 
 	export let project: Project;
 	let isInViewport: boolean = false;
@@ -12,18 +13,18 @@
 	on:viewportEnter={() => (isInViewport = true)}
 	on:viewportExit={() => (isInViewport = false)}
 >
-	<div
+	<Box
 		style="opacity: {isInViewport ? 1 : 0}; transform: translateY(-{isInViewport ? 0 : 50}px);"
-		class="bg-white bg-opacity-50 rounded-md p-4 flex flex-col gap-4 shadow-sm lg:hover:shadow-md lg:hover:bg-opacity-100 transition-all ease-in-out duration-700 group/project h-full"
+		class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md lg:hover:bg-opacity-100 transition-all ease-in-out duration-700 group/project h-full"
 	>
-		<div class="flex items-center gap-3">
-			<h3 class="font-bold text-lg leading-none text-black normal-case">{project.title}</h3>
+		<div class="flex items-center justify-between gap-3">
+			<h3 class="font-bold text-lg leading-none normal-case">{project.title}</h3>
 			<ul class="flex flex-wrap gap-2">
 				{#each project.tags as tag}
 					<li style="color: {tag.standaloneColor};" class="group/tag">
 						<ToolTip tip={tag.name}>
 							<svg
-								class="text-black group-hover/tag:text-current transition-colors duration-300 ease-in-out"
+								class="text-white group-hover/tag:text-current transition-colors duration-300 ease-in-out"
 								style="width: 1.5em; height: 1.5em;"
 								viewBox={tag.svg.viewBox}
 							>
@@ -36,9 +37,9 @@
 				{/each}
 			</ul>
 		</div>
-		<p class="font-light">{project.description}</p>
+		<p class="text-gray-300 text-sm">{project.description}</p>
 		<!-- <svg
-			class="absolute bottom-4 right-4 text-gray lg:group-hover/project:opacity-100 lg:opacity-0 -translate-x-2 lg:group-hover/project:translate-x-0 transition-all"
+			class="absolute bottom-4 right-4 text-gray-normal lg:group-hover/project:opacity-100 lg:opacity-0 -translate-x-2 lg:group-hover/project:translate-x-0 transition-all"
 			fill="none"
 			height="36"
 			shape-rendering="geometricPrecision"
@@ -56,7 +57,7 @@
 				<a
 					href={project.repo}
 					target="_blank"
-					class="lg:hover:text-orange transition-colors duration-300 ease-in-out"
+					class="lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
 				>
 					<svg
 						fill="currentColor"
@@ -74,7 +75,7 @@
 				<a
 					href={project.link}
 					target="_blank"
-					class="lg:hover:text-orange transition-colors duration-300 ease-in-out"
+					class="lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
 				>
 					<svg
 						fill="currentColor"
@@ -89,5 +90,5 @@
 				</a>
 			{/if}
 		</div>
-	</div>
+	</Box>
 </li>
