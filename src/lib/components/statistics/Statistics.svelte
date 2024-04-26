@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { EXPERIENCE, PROJECTS } from "$lib/util/constants";
-	import Box from "../Box.svelte";
 	import Statistic from "./Statistic.svelte";
 
 	const calculateYearsApart = (date1: Date, date2: Date): number =>
