@@ -6,8 +6,8 @@
 	export let id: string;
 </script>
 
-<section {id} class={cn("py-4 border-t-2 border-gray-900", $$restProps.class ?? "")}>
-	<h2 class="text-xl mb-4 text-center font-lexend text-orange-500 {sr ? 'sr-only' : 'not-sr-only'}">
+<section {id} class={cn("py-8 border-t-2 border-gray-900", $$restProps.class ?? "")}>
+	<h2 class="text-xl mb-8 text-center font-lexend text-orange-500 {sr ? 'sr-only' : 'not-sr-only'}">
 		{title}
 	</h2>
 	<slot />

@@ -21,7 +21,7 @@
 		gap: "2rem",
 		pagination: false,
 		autoScroll: {
-			speed: 0.35,
+			speed: 0.2,
 			pauseOnHover: false
 		}
 	}}
