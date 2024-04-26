@@ -10,6 +10,8 @@
 	import type { PageData } from "./$types";
 
 	export let data: PageData;
+
+	EXPERIENCE.sort((a, b) => +b.startDate - +a.startDate);
 </script>
 
 <ToTop />
@@ -40,7 +42,7 @@
 </Section>
 <Section title="Experience" id="experience">
 	<ul class="space-y-6">
-		{#each EXPERIENCE.toSorted((a, b) => +b.startDate - +a.startDate) as node, i}
+		{#each EXPERIENCE as node}
 			<Node {node} />
 		{/each}
 	</ul>
