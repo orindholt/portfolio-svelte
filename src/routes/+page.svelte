@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import Activity from "$lib/components/Activity.svelte";
 	import ReadMore from "$lib/components/ReadMore.svelte";
 	import Section from "$lib/components/Section.svelte";
 	import Node from "$lib/components/experience/Node.svelte";
@@ -6,6 +7,8 @@
 	import Project from "$lib/components/project/Project.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
 	import { EXPERIENCE, PROJECTS, Socials } from "../lib/util/constants";
+
+	export let data;
 </script>
 
 <ToTop />
@@ -23,6 +26,7 @@
 		<SocialLink social={Socials.LINKEDIN} />
 		<SocialLink social={Socials.STACKOVERFLOW} />
 	</div>
+	<Activity data={data.activityData} />
 	<!-- <SkillScroll /> -->
 	<!-- <ScrollDown /> -->
 </div>

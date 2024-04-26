@@ -15,7 +15,7 @@
 
 		const navElm = document.querySelector("nav");
 		// extra 2 pixels to account for border
-		const navHeight = navElm ? navElm.offsetHeight - 2 : 0;
+		const navHeight = navElm && window.innerWidth > 768 ? navElm.offsetHeight - 2 : 0;
 
 		window.scrollTo({
 			top: el.id === "top" ? 0 : Math.max(0, el.offsetTop - navHeight),

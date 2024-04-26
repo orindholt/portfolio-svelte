@@ -37,6 +37,7 @@
 		"@splidejs/svelte-splide": "^0.2.9",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
+		"svelte-countup": "^0.2.6",
 		"tailwind-merge": "^2.1.0"
 	}
 }
