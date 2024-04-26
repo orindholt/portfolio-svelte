@@ -3,6 +3,7 @@ import { GITHUB_ACCESS_TOKEN } from "$env/static/private";
 export async function load() {
 	const activityData = await fetch("https://api.github.com/graphql", {
 		method: "POST",
+		cache: "force-cache",
 		headers: {
 			Authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`,
 			"Content-Type": "application/json"
