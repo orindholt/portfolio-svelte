@@ -42,7 +42,7 @@ export default {
 		extend: {
 			spacing: {
 				navbar: "5rem",
-				page: "4rem"
+				page: "4.25rem"
 			},
 			flex: {
 				2: "2 2 0%",

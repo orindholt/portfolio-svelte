@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import Activity from "$lib/components/Activity.svelte";
 	import ReadMore from "$lib/components/ReadMore.svelte";
 	import Section from "$lib/components/Section.svelte";
 	import Node from "$lib/components/experience/Node.svelte";
@@ -6,6 +7,11 @@
 	import Project from "$lib/components/project/Project.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
 	import { EXPERIENCE, PROJECTS, Socials } from "../lib/util/constants";
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
+
+	EXPERIENCE.sort((a, b) => +b.startDate - +a.startDate);
 </script>
 
 <ToTop />
@@ -23,6 +29,7 @@
 		<SocialLink social={Socials.LINKEDIN} />
 		<SocialLink social={Socials.STACKOVERFLOW} />
 	</div>
+	<Activity data={data.activityData} />
 	<!-- <SkillScroll /> -->
 	<!-- <ScrollDown /> -->
 </div>
@@ -35,7 +42,7 @@
 </Section>
 <Section title="Experience" id="experience">
 	<ul class="space-y-6">
-		{#each EXPERIENCE.toSorted((a, b) => +b.startDate - +a.startDate) as node, i}
+		{#each EXPERIENCE as node}
 			<Node {node} />
 		{/each}
 	</ul>

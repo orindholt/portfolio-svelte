@@ -10,7 +10,7 @@
 
 <Navbar />
 <main
-	class="p-[calc(theme(spacing.page)/2)] md:p-page !pt-[calc(theme(spacing.page)+theme(spacing.navbar))] max-w-4xl mx-auto"
+	class="p-[calc(theme(spacing.page)/2)] md:p-page !pt-[calc(theme(spacing.page)+theme(spacing.navbar))] min-h-screen max-w-4xl mx-auto flex flex-col"
 >
 	<slot />
 </main>

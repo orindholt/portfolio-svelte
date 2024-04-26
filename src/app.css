@@ -40,3 +40,7 @@
 		mask: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
 	}
 }
+
+.splide__track {
+	@apply cursor-grab active:cursor-grabbing;
+}
