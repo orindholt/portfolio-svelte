@@ -1,6 +1,6 @@
 <script lang="ts">
 	export const ssr = false;
-	// @ts-ignore
+	// @ts-expect-error: No types available
 	import Countup from "svelte-countup";
 
 	export let value: number;
