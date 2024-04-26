@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { Socials } from "$lib/util/constants";
+	import type { PageData } from "../../routes/$types";
 	import CountUp from "./CountUp.svelte";
 	import ToolTip from "./ToolTip.svelte";
 
-	export let data: any;
+	export let data: PageData["activityData"];
 </script>
 
 <div class="w-full relative">

@@ -15,7 +15,9 @@
 	{#if errorVisible}
 		<p aria-hidden>{$page.error?.message}</p>
 	{:else}
-		<button type="button" class="absolute bottom-0 left-0" on:click={showError}>Show Error</button>
+		<button type="button" class="absolute bottom-0 left-0 opacity-10" on:click={showError}
+			>Show Error</button
+		>
 	{/if}
 	<Button href="/">Home</Button>
 </div>

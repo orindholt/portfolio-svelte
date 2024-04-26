@@ -7,8 +7,9 @@
 	import Project from "$lib/components/project/Project.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
 	import { EXPERIENCE, PROJECTS, Socials } from "../lib/util/constants";
+	import type { PageData } from "./$types";
 
-	export let data;
+	export let data: PageData;
 </script>
 
 <ToTop />
