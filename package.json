@@ -35,7 +35,6 @@
 	"dependencies": {
 		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
 		"@splidejs/svelte-splide": "^0.2.9",
-		"@sveltejs/adapter-vercel": "^5.3.0",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
 		"svelte-countup": "^0.2.6",
