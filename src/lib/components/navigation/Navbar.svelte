@@ -32,7 +32,12 @@
 		<NavbarLink on:navigation={onNavigation} href="#bio">Bio</NavbarLink>
 		<!-- <NavbarLink href="#chat">Chat</NavbarLink> -->
 	</ul>
-	<button type="button" class="relative z-10 size-8 md:hidden" on:click={toggleMenu}>
+	<button
+		name={isOpen ? "Close menu" : "Open menu"}
+		type="button"
+		class="relative z-10 size-8 md:hidden"
+		on:click={toggleMenu}
+	>
 		{#if !isOpen}
 			<svg
 				fill="none"

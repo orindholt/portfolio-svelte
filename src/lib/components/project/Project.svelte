@@ -44,6 +44,7 @@
 		<div class="flex gap-2 mt-auto justify-end">
 			{#if project.repo}
 				<a
+					aria-label="Project repository"
 					href={project.repo}
 					target="_blank"
 					class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
@@ -53,6 +54,7 @@
 			{/if}
 			{#if project.link}
 				<a
+					aria-label="Project link"
 					href={project.link}
 					target="_blank"
 					class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"

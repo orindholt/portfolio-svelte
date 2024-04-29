@@ -14,11 +14,9 @@
 			<span class="font-bold leading-none">
 				<CountUp value={data.totalContributions} />
 			</span>
-			<span class="text-gray-600 text-sm">
-				Total <a
-					href={Socials.GITHUB}
-					target="_blank"
-					class="lg:hover:text-orange-500 transition-colors">Github</a
+			<span class="text-gray-300 text-sm">
+				<a href={Socials.GITHUB} target="_blank" class="lg:hover:text-orange-500 transition-colors"
+					>Github</a
 				> Contributions
 			</span>
 		</h3>
