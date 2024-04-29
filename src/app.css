@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-black text-white font-libre;
+		@apply bg-black text-white font-unbounded;
 	}
 	body::after {
 		@apply block opacity-[0.025] -z-[1] fixed content-[""] -inset-[100vh];
