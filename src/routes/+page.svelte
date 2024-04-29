@@ -18,7 +18,7 @@
 <!-- <PointerFollower /> -->
 <div
 	id="top"
-	class="min-h-[calc(100vh-theme(spacing.navbar))] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center"
+	class="min-h-[calc(100vh-theme(spacing.navbar))] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center animate-fade-in"
 >
 	<div class="flex flex-col-reverse md:flex-col">
 		<h2 class="text-xl sm:text-2xl font-extralight text-gray-400">Fullstack web developer</h2>
@@ -49,17 +49,18 @@
 		{/each}
 	</ul>
 </Section>
-<Section title="About me" id="bio" sr class="space-y-4 text-center">
+<Section title="About" id="bio" class="space-y-4 text-center">
 	<h3 class="font-bold text-4xl normal-case">
 		<span
 			class="inline-block animate-wave origin-bottom-right will-change-transform relative -top-1"
-			>👋</span
-		> Hello! I'm Oliver
+		>
+			👋
+		</span>
+		Hello!<br />
 	</h3>
 	<p>
-		With over two years of hands-on knowledge gained through studying web development in my free
-		time and at Roskilde Technical School, I take pride in writing clean, appealing, and reusable
-		code that's easy for anyone (including your grandmother) to understand.
+		I take pride in writing clean, appealing, and reusable code that's easy for anyone (including
+		your grandmother) to understand.
 	</p>
 	<p>
 		Although I might be a junior in the job market, my ability to collaborate shines. I've
@@ -76,7 +77,8 @@
 		Described by classmates, coworkers, and myself as a <b>team player</b>, <b>trusted ally</b>, and
 		<b>quick learner</b>.
 	</p>
-	<ReadMore>
+	<!-- TODO: Add instagram feed -->
+	<!-- <ReadMore>
 		<h3 class="font-semibold text-center text-xl my-4">Interesting things about me</h3>
 		<ul class="list-disc">
 			<li class="space-y-4">
@@ -100,5 +102,5 @@
 				/>
 			</li>
 		</ul>
-	</ReadMore>
+	</ReadMore> -->
 </Section>

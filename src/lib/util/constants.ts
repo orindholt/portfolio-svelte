@@ -33,7 +33,8 @@ export const EXPERIENCE: Experience[] = [
 		companyLink: "https://daxmedia.eu/",
 		startDate: new Date("2023-02-01"),
 		endDate: null,
-		description: "I worked as a Development Specialist at DaxMedia."
+		description:
+			"I am currently working as a Development Specialist where I primarily work with full-stack e-commerce solutions."
 	}
 ];
 
@@ -221,11 +222,20 @@ export const PROJECTS: Project[] = [
 		tags: [SKILLS.typescript, SKILLS.react, SKILLS.next, SKILLS.tailwind, SKILLS.firebase]
 	},
 	{
+		title: "Cookie Builder",
+		slug: "cookie-builder",
+		description:
+			"Cookie Builder is a simple tool for building HTTP cookies. It's built with Vue and PrimeVue.",
+		link: "https://cookie-builder.vercel.app",
+		repo: "https://github.com/orindholt/cookie-builder",
+		tags: [SKILLS.vue, SKILLS.tailwind, SKILLS.typescript]
+	},
+	{
 		title: "Portfolio",
 		slug: "portfolio",
 		description:
 			"This very portfolio website. My first full project built with Svelte. It's a work in progress, and constantly being improved upon.",
 		repo: "https://github.com/orindholt/portfolio-svelte",
-		tags: [SKILLS.typescript, SKILLS.svelte]
+		tags: [SKILLS.typescript, SKILLS.tailwind, SKILLS.svelte]
 	}
 ];

@@ -36,8 +36,7 @@ export default {
 			current: "currentColor"
 		},
 		fontFamily: {
-			lexend: ["Lexend Deca", "Source Sans 3", "sans-serif"],
-			"source-sans": ["Source Sans 3", "Lexend Deca", "sans-serif"]
+			libre: ["Libre Franklin", "sans-serif"]
 		},
 		extend: {
 			spacing: {
@@ -49,13 +48,18 @@ export default {
 				3: "3 3 0%"
 			},
 			animation: {
-				wave: "wave 5s ease-in-out infinite"
+				wave: "wave 5s ease-in-out infinite",
+				"fade-in": "fade-in 0.75s ease-in-out"
 			},
 			keyframes: {
 				wave: {
 					"0%, 80%, 100%": { transform: "initial" },
 					"20%, 50%": { transform: "rotate(10deg)" },
 					"35%, 65%": { transform: "rotate(-8deg)" }
+				},
+				"fade-in": {
+					"0%": { opacity: 0 },
+					"100%": { opacity: 1 }
 				}
 			}
 		}
