@@ -5,6 +5,7 @@
 	import ToolTip from "./ToolTip.svelte";
 
 	export let data: PageData["activityData"];
+	const days = data.weeks.flatMap((week: any) => week.contributionDays);
 </script>
 
 <div class="w-full relative">
@@ -22,20 +23,18 @@
 	</h3>
 	<div class="overflow-x-auto overflow-y-hidden w-full pb-4 pt-16" style="direction: rtl;">
 		<div class="grid grid-rows-7 grid-flow-col gap-1 w-fit" style="direction: ltr;">
-			{#each data.weeks as week}
-				{#each week.contributionDays as day}
-					{@const count = day.contributionCount}
-					{@const level = count >= 20 ? 4 : count >= 14 ? 3 : count >= 7 ? 2 : count > 0 ? 1 : 0}
-					<ToolTip tip={count}>
-						<div data-count={count} data-level={level} />
-					</ToolTip>
-				{/each}
+			{#each days as day, i (i)}
+				{@const count = day.contributionCount}
+				{@const level = count >= 20 ? 4 : count >= 14 ? 3 : count >= 7 ? 2 : count > 0 ? 1 : 0}
+				<ToolTip tip={count}>
+					<div data-count={count} data-level={level} />
+				</ToolTip>
 			{/each}
 		</div>
 	</div>
 </div>
 
-<style>
+<style scoped>
 	[data-level] {
 		@apply size-4 rounded-sm;
 	}

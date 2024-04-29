@@ -23,8 +23,9 @@
 		class="md:group-even/exp:col-start-1 md:group-even/exp:col-end-2 col-start-3 col-end-4 row-start-1 row-end-2 transition-all duration-700 ease-in-out flex flex-col justify-between h-full space-y-4"
 		style="opacity: {isInViewport ? 1 : 0}; transform: translateY(-{isInViewport ? 0 : 50}px);"
 	>
-		<h3 class="font-semibold normal-case text-base">
-			{node.title} &#x2022;
+		<h3 class="font-semibold normal-case text-base space-x-2">
+			<span>{node.title}</span>
+			<span class="text-gray-500">&#x2022;</span>
 			<a
 				target="_blank"
 				href={node.companyLink}
