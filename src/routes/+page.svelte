@@ -21,7 +21,7 @@
 	class="min-h-[calc(100vh-theme(spacing.navbar))] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center animate-fade-in"
 >
 	<div class="flex flex-col-reverse md:flex-col">
-		<h2 class="text-xl sm:text-2xl font-extralight text-gray-400">Fullstack web developer</h2>
+		<h2 class="text-xl sm:text-2xl font-extralight text-gray-300">Fullstack web developer</h2>
 		<h1 class="text-5xl sm:text-6xl xl:text-7xl font-bold uppercase gap-6 !leading-none">
 			Oliver Rindholt<span class="sr-only">- Portfolio</span>
 		</h1>

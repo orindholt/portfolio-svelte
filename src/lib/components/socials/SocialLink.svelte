@@ -10,6 +10,7 @@
 </script>
 
 <a
+	aria-label={social}
 	href={social}
 	class="lg:hover:text-orange-500 transition-colors duration-300 ease-in-out group/ref relative block"
 	target="_blank"
