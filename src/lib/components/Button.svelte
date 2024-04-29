@@ -17,5 +17,5 @@
 		$$restProps.class ?? ""
 	)}
 >
-	<span class="relative -top-px font-semibold"><slot /></span>
+	<slot />
 </svelte:element>

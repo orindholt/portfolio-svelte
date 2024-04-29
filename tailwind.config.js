@@ -36,7 +36,7 @@ export default {
 			current: "currentColor"
 		},
 		fontFamily: {
-			libre: ["Libre Franklin", "sans-serif"]
+			unbounded: ["Unbounded", "sans-serif"]
 		},
 		extend: {
 			spacing: {

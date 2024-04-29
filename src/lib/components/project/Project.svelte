@@ -9,6 +9,8 @@
 	let isInViewport: boolean = false;
 </script>
 
+<!-- TODO: Add dimmed logo as Box background -->
+<!-- TODO: Add border hover effect -->
 <li
 	use:viewport
 	on:viewportEnter={() => (isInViewport = true)}
