@@ -4,7 +4,7 @@
 	import Countup from "svelte-countup";
 
 	export let value: number;
-	export let duration: number = 500;
+	export let duration: number = 2000;
 </script>
 
 <Countup initial={0} {value} {duration} />

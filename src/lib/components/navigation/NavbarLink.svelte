@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "$lib/util/functions";
+	import { cn } from "$lib/util/helpers";
 
 	export let href: string;
 

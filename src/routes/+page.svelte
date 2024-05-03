@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Activity from "$lib/components/Activity.svelte";
-	import ReadMore from "$lib/components/ReadMore.svelte";
 	import Section from "$lib/components/Section.svelte";
-	import Node from "$lib/components/experience/Node.svelte";
+	import ExperienceList from "$lib/components/experience/ExperienceList.svelte";
 	import ToTop from "$lib/components/navigation/ToTop.svelte";
-	import Project from "$lib/components/project/Project.svelte";
+	import ProjectList from "$lib/components/project/ProjectList.svelte";
+	import SkillScroll from "$lib/components/skills/SkillScroll.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
-	import { EXPERIENCE, PROJECTS, Socials } from "../lib/util/constants";
+	import { EXPERIENCE, Socials } from "../lib/util/constants";
 	import type { PageData } from "./$types";
 
 	export let data: PageData;
@@ -18,7 +18,7 @@
 <!-- <PointerFollower /> -->
 <div
 	id="top"
-	class="min-h-[calc(100vh-theme(spacing.navbar))] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center animate-fade-in"
+	class="min-h-[calc(100vh-theme(spacing.navbar))] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center"
 >
 	<div class="flex flex-col-reverse md:flex-col">
 		<h2 class="text-xl sm:text-2xl font-extralight text-gray-300">Fullstack web developer</h2>
@@ -31,24 +31,11 @@
 		<SocialLink social={Socials.LINKEDIN} />
 		<SocialLink social={Socials.STACKOVERFLOW} />
 	</div>
-	<Activity data={data.activityData} />
-	<!-- <SkillScroll /> -->
+	<Activity data={data.activityData} language={data.language} />
 	<!-- <ScrollDown /> -->
 </div>
-<Section title="Showcase" id="showcase">
-	<ul class="space-y-6">
-		{#each PROJECTS as project}
-			<Project {project} />
-		{/each}
-	</ul>
-</Section>
-<Section title="Experience" id="experience">
-	<ul class="space-y-6">
-		{#each EXPERIENCE as node}
-			<Node {node} />
-		{/each}
-	</ul>
-</Section>
+<ProjectList language={data.language} />
+<ExperienceList language={data.language} />
 <Section title="About" id="bio" class="space-y-4 text-center">
 	<h3 class="font-bold text-4xl normal-case">
 		<span
@@ -77,6 +64,7 @@
 		Described by classmates, coworkers, and myself as a <b>team player</b>, <b>trusted ally</b>, and
 		<b>quick learner</b>.
 	</p>
+	<SkillScroll />
 	<!-- TODO: Add instagram feed -->
 	<!-- <ReadMore>
 		<h3 class="font-semibold text-center text-xl my-4">Interesting things about me</h3>

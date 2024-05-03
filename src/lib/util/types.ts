@@ -28,6 +28,7 @@ export interface Project {
 	link?: string;
 	repo?: string;
 	tags: Skill[];
+	startDate?: Date;
 }
 
 export type ButtonType = "button" | "submit" | "reset";

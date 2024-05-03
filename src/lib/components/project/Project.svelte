@@ -4,8 +4,11 @@
 	import type { Project } from "$lib/util/types";
 	import { IconCode, IconLink } from "@tabler/icons-svelte";
 	import Box from "../Box.svelte";
+	import type { PageData } from "../../../routes/$types";
+	import { dateString } from "$lib/util/helpers";
 
 	export let project: Project;
+	export let language: PageData["language"];
 	let isInViewport: boolean = false;
 </script>
 
@@ -20,12 +23,13 @@
 		style="opacity: {isInViewport ? 1 : 0}; transform: translateY(-{isInViewport ? 0 : 50}px);"
 		class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md lg:hover:bg-opacity-100 transition-all ease-in-out duration-700 group/project h-full"
 	>
-		<div class="flex items-center justify-between gap-3">
+		<div class="flex items-center justify-between gap-3 flex-wrap">
 			<h3 class="font-bold text-lg leading-none normal-case">{project.title}</h3>
 			<ul class="flex flex-wrap gap-2">
 				{#each project.tags as tag}
 					<li style="color: {tag.standaloneColor};" class="group/tag">
-						<ToolTip tip={tag.name}>
+						<ToolTip>
+							<span slot="tip">{tag.name}</span>
 							<svg
 								class="text-white group-hover/tag:text-current transition-colors duration-300 ease-in-out"
 								style="width: 1.5em; height: 1.5em;"
@@ -41,27 +45,34 @@
 			</ul>
 		</div>
 		<p class="text-gray-300 text-sm">{project.description}</p>
-		<div class="flex gap-2 mt-auto justify-end">
-			{#if project.repo}
-				<a
-					aria-label="Project repository"
-					href={project.repo}
-					target="_blank"
-					class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
-				>
-					<IconCode size={24} />
-				</a>
+		<div class="flex mt-auto gap-4">
+			{#if project.startDate}
+				<p class="font-medium text-sm text-orange-500">
+					Started ~ {dateString(project.startDate, language)}
+				</p>
 			{/if}
-			{#if project.link}
-				<a
-					aria-label="Project link"
-					href={project.link}
-					target="_blank"
-					class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
-				>
-					<IconLink size={24} />
-				</a>
-			{/if}
+			<div class="flex gap-2 ml-auto">
+				{#if project.repo}
+					<a
+						aria-label="Project repository"
+						href={project.repo}
+						target="_blank"
+						class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
+					>
+						<IconCode size={24} />
+					</a>
+				{/if}
+				{#if project.link}
+					<a
+						aria-label="Project link"
+						href={project.link}
+						target="_blank"
+						class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
+					>
+						<IconLink size={24} />
+					</a>
+				{/if}
+			</div>
 		</div>
 	</Box>
 </li>

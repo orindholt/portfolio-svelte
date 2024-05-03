@@ -5,7 +5,8 @@
 	import ToolTip from "./ToolTip.svelte";
 
 	export let data: PageData["activityData"];
-	const days = data?.weeks.flatMap((week: any) => week.contributionDays);
+	export let language: PageData["language"];
+	const days = data?.weeks.flatMap((week) => week.contributionDays);
 </script>
 
 {#if days?.length > 0}
@@ -25,7 +26,19 @@
 				{#each days as day, i (i)}
 					{@const count = day.contributionCount}
 					{@const level = count >= 20 ? 4 : count >= 14 ? 3 : count >= 7 ? 2 : count > 0 ? 1 : 0}
-					<ToolTip tip={count}>
+					<ToolTip>
+						<div slot="tip" class="text-xl font-bold">
+							{#if language}
+								<span class="text-xs text-gray-300 font-normal">
+									{new Date(day.date).toLocaleDateString(language, {
+										day: "numeric",
+										month: "numeric",
+										year: "2-digit"
+									})}
+								</span>
+							{/if}
+							{count}
+						</div>
 						<div data-count={count} data-level={level} />
 					</ToolTip>
 				{/each}

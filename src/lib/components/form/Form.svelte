@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { enhance } from "$app/forms";
-	import { cn } from "$lib/util/functions";
+	import { cn } from "$lib/util/helpers";
 	import { Confetti } from "svelte-confetti";
 
 	type Method = "post" | "get";
