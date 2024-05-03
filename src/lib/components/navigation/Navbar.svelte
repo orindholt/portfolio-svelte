@@ -21,7 +21,7 @@
 			? 'max-md:translate-x-0'
 			: 'max-md:translate-x-full'}"
 	>
-		<NavbarLink on:navigation={onNavigation} href="#top">Sanctuary</NavbarLink>
+		<NavbarLink on:navigation={onNavigation} href="#top">Surface</NavbarLink>
 		<span class="opacity-20 max-md:hidden text-3xl">&#x2022;</span>
 		<NavbarLink on:navigation={onNavigation} href="#showcase">Showcase</NavbarLink>
 		<NavbarLink on:navigation={onNavigation} href="#top" class="max-md:hidden !flex-initial">
@@ -29,7 +29,7 @@
 		</NavbarLink>
 		<NavbarLink on:navigation={onNavigation} href="#experience">Experience</NavbarLink>
 		<span class="opacity-20 max-md:hidden text-3xl">&#x2022;</span>
-		<NavbarLink on:navigation={onNavigation} href="#bio">Bio</NavbarLink>
+		<NavbarLink on:navigation={onNavigation} href="#bio">Profile</NavbarLink>
 		<!-- <NavbarLink href="#chat">Chat</NavbarLink> -->
 	</ul>
 	<button

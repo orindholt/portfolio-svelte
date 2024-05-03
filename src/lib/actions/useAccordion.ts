@@ -13,10 +13,12 @@ export default function accordion(node: HTMLElement, isOpen: boolean) {
 				[
 					{
 						height: initialHeight + "px",
+						opacity: 1,
 						overflow: "hidden"
 					},
 					{
 						height: 0,
+						opacity: 0,
 						overflow: "hidden"
 					}
 				],

@@ -40,3 +40,11 @@ export function hexToRgb(hex: string, css: boolean = false) {
 
 	return css ? `rgb(${r}, ${g}, ${b})` : { r, g, b };
 }
+
+export function dateString(date: Date, language: string | null | undefined = "en") {
+	if (!language) language = "en";
+	return date.toLocaleDateString(language, {
+		year: "numeric",
+		month: "short"
+	});
+}

@@ -7,13 +7,14 @@
 	function toggle() {
 		toggled = !toggled;
 	}
+	$: text = toggled ? "Collapse" : "Expand";
 </script>
 
 <div class="flex flex-col gap-4">
 	<div use:accordion={toggled}>
 		<slot />
 	</div>
-	<Button class="mx-auto" on:click={toggle}>
-		{!toggled ? "Expand" : "Collapse"}
+	<Button name="{text}" class="mx-auto" on:click={toggle}>
+		{text}
 	</Button>
 </div>
