@@ -19,5 +19,5 @@
 			>Show Error</button
 		>
 	{/if}
-	<Button href="/">Home</Button>
+	<Button name="Home" href="/">Home</Button>
 </div>
