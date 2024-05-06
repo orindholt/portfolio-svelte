@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Socials } from "$lib/util/constants";
+	import { dateString } from "$lib/util/helpers";
 	import type { PageData } from "../../routes/$types";
 	import CountUp from "./CountUp.svelte";
 	import ToolTip from "./ToolTip.svelte";
@@ -30,7 +31,7 @@
 						<div slot="tip" class="text-xl font-bold">
 							{#if language}
 								<span class="text-xs text-gray-300 font-normal">
-									{new Date(day.date).toLocaleDateString(language, {
+									{dateString(new Date(day.date), language, {
 										day: "numeric",
 										month: "numeric",
 										year: "2-digit"
