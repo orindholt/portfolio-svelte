@@ -41,13 +41,16 @@ export function hexToRgb(hex: string, css: boolean = false) {
 	return css ? `rgb(${r}, ${g}, ${b})` : { r, g, b };
 }
 
+const defaultLocale = "da-DK";
+
 export function dateString(
 	date: Date,
-	language: string | null | undefined = "en",
+	language: string | null | undefined = defaultLocale,
 	options?: Intl.DateTimeFormatOptions
 ) {
-	language ??= "en";
-	return date.toLocaleDateString("en", {
+	language ??= defaultLocale;
+	if (/\,/.test(language)) language = language.replace(/\,.*/, "");
+	return date.toLocaleDateString(language, {
 		year: "numeric",
 		month: "short",
 		...options

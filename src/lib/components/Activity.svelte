@@ -10,6 +10,7 @@
 	const days = data?.weeks.flatMap((week) => week.contributionDays);
 </script>
 
+<!-- TODO: Add custom scroll bar -->
 {#if days?.length > 0}
 	<div class="w-full relative">
 		<h3 class="text-3xl flex flex-col absolute top-0 inset-x-0">
@@ -17,12 +18,16 @@
 				<CountUp value={data.totalContributions} />
 			</span>
 			<span class="text-gray-300 text-sm">
-				<a href={Socials.GITHUB} target="_blank" class="lg:hover:text-orange-500 transition-colors"
-					>Github</a
-				> Contributions
+				<a href={Socials.GITHUB} target="_blank" class="lg:hover:text-orange-500 transition-colors">
+					Github
+				</a>
+				Contributions
 			</span>
 		</h3>
-		<div class="overflow-x-auto overflow-y-hidden w-full pb-4 pt-16" style="direction: rtl;">
+		<div
+			class="overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-600 w-full pb-4 pt-16"
+			style="direction: rtl;"
+		>
 			<div class="grid grid-rows-7 grid-flow-col gap-1 w-fit" style="direction: ltr;">
 				{#each days as day, i (i)}
 					{@const count = day.contributionCount}
