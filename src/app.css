@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-black text-white font-unbounded;
+		@apply bg-black text-white font-unbounded scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500;
 	}
 	body::after {
 		@apply block opacity-[0.025] -z-[1] fixed content-[""] -inset-[100vh];

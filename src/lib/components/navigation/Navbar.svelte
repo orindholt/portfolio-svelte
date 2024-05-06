@@ -14,7 +14,7 @@
 </script>
 
 <nav
-	class="md:h-navbar fixed top-0 inset-x-0 z-50 p-6 md:p-4 max-w-6xl md:mx-auto flex items-start md:items-center max-md:justify-end md:bg-gray-950 md:bg-opacity-50 md:backdrop-blur-md"
+	class="md:h-navbar fixed top-0 inset-x-0 z-50 p-6 md:p-4 max-w-6xl md:mx-auto flex items-start md:items-center max-md:justify-end md:bg-gray-950 md:bg-opacity-50 md:backdrop-blur-md md:rounded-b-md"
 >
 	<ul
 		class="flex max-md:flex-col items-center max-md:justify-center max-md:gap-12 flex-1 max-md:fixed max-md:inset-0 max-md:transition-transform max-md:duration-500 max-md:ease-in-out max-md:bg-black max-md:bg-opacity-90 max-md:backdrop-blur-sm md:text-base text-4xl {isOpen
@@ -38,6 +38,7 @@
 		class="relative z-10 size-8 md:hidden"
 		on:click={toggleMenu}
 	>
+		<!-- TODO: Add icon from previous portfolio -->
 		{#if !isOpen}
 			<svg
 				fill="none"
