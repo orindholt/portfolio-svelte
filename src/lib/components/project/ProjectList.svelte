@@ -15,7 +15,7 @@
 			<Project {project} {language} />
 		{/each}
 	</ul>
-	<ReadMore>
+	<ReadMore as="ul" class="!mt-6">
 		{#each PROJECTS.slice(sliceThreshold) as project}
 			<Project {project} {language} />
 		{/each}
