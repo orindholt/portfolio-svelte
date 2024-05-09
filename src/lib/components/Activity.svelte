@@ -18,14 +18,18 @@
 				<CountUp value={data.totalContributions} />
 			</span>
 			<span class="text-gray-300 text-sm">
-				<a href={Socials.GITHUB} target="_blank" class="lg:hover:text-orange-500 transition-colors">
+				<a
+					href={Socials.GITHUB}
+					target="_blank"
+					class="lg:hover:text-primary-500 transition-colors"
+				>
 					Github
 				</a>
 				Contributions
 			</span>
 		</h3>
 		<div
-			class="overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-600 w-full pb-4 pt-16"
+			class="overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary-600 w-full pb-4 pt-16"
 			style="direction: rtl;"
 		>
 			<div class="grid grid-rows-7 grid-flow-col gap-1 w-fit" style="direction: ltr;">
@@ -60,16 +64,16 @@
 			@apply bg-gray-900;
 		}
 		[data-level="1"] {
-			@apply bg-orange-950;
+			@apply bg-primary-950;
 		}
 		[data-level="2"] {
-			@apply bg-orange-800;
+			@apply bg-primary-800;
 		}
 		[data-level="3"] {
-			@apply bg-orange-700;
+			@apply bg-primary-700;
 		}
 		[data-level="4"] {
-			@apply bg-orange-500;
+			@apply bg-primary-500;
 		}
 	</style>
 {/if}

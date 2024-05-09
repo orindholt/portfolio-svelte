@@ -28,14 +28,14 @@
 			<a
 				target="_blank"
 				href={data.companyLink}
-				class="font-normal text-orange-500 lg:hover:opacity-50 transition-opacity group/ref relative inline-block"
+				class="font-normal text-primary-500 lg:hover:opacity-50 transition-opacity group/ref relative inline-block"
 			>
 				{data.company}
 				<ReferrerArrow size={10} />
 			</a>
 		</h3>
 		<p class="text-sm text-gray-300">{data.description}</p>
-		<p class="font-medium text-sm text-orange-500">
+		<p class="font-medium text-sm text-primary-500">
 			{dateString(data.startDate, language)} - {data.endDate
 				? dateString(data.endDate, language)
 				: "Right now"}

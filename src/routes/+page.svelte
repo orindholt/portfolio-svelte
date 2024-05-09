@@ -6,6 +6,7 @@
 	import ProjectList from "$lib/components/project/ProjectList.svelte";
 	import SkillScroll from "$lib/components/skills/SkillScroll.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
+	import ThemeSelector from "$lib/components/theme/ThemeSelector.svelte";
 	import { EXPERIENCE, Socials } from "../lib/util/constants";
 	import type { PageData } from "./$types";
 
@@ -18,9 +19,10 @@
 <!-- <PointerFollower /> -->
 <div
 	id="top"
-	class="min-h-[calc(100vh-theme(spacing.navbar))] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center"
+	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page)/2)] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center animate-fade-in"
 >
 	<div class="flex flex-col-reverse md:flex-col">
+		<ThemeSelector />
 		<h2 class="text-xl sm:text-2xl font-extralight text-gray-300">Fullstack web developer</h2>
 		<h1 class="text-5xl sm:text-6xl xl:text-7xl font-bold uppercase gap-6 !leading-none">
 			Oliver Rindholt<span class="sr-only">- Portfolio</span>
@@ -46,19 +48,12 @@
 		Hello!<br />
 	</h3>
 	<p>
-		I take pride in writing clean, appealing, and reusable code that's easy for anyone (including
-		your grandmother) to understand.
+		I take pride in writing clean, readable, and reusable code that's easy to interpret and scale.
 	</p>
 	<p>
-		Although I might be a junior in the job market, my ability to collaborate shines. I've
-		successfully worked with graphic designers, managers, product owners, and fellow programmers on
-		various web applications.
-	</p>
-	<p>
-		I excel in learning new technologies and languages, documenting processes, and building
-		responsive frontend solutions by interacting with the backend through APIs and databases. I have
-		a focus on modern technology, but I'm adept at seamlessly integrating and adapting to older and
-		preexisting tech environments.
+		I excel in learning new technologies and languages, documenting development processes, and
+		building responsive fullstack solutions. My focus area is on modern tech-stacks, but I'm adept
+		at seamlessly integrating and adapting to older and legacy tech environments.
 	</p>
 	<p>
 		Described by classmates, coworkers, and myself as a <b>team player</b>, <b>trusted ally</b>, and
@@ -74,7 +69,7 @@
 					I also make electronic music on the down-low. My go-to for music magic is Ableton. I play
 					around with synths, drum beats, and cool effects to shape my sound. feel free to check out
 					the stuff I put together on my <a
-						class="text-orange-500 lg:hover:text-opacity-80 transition-colors"
+						class="text-primary-500 lg:hover:text-opacity-80 transition-colors"
 						href="https://soundcloud.com/oliver-rindholt"
 						target="_blank">SoundCloud</a
 					>!

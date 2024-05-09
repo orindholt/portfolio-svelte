@@ -1,4 +1,4 @@
-import type { Experience, Project, Skill } from "./types";
+import type { Experience, Project, Skill, Theme } from "./types";
 
 export enum Socials {
 	GITHUB = "https://github.com/orindholt",
@@ -7,6 +7,62 @@ export enum Socials {
 }
 
 export const CONTACT_EMAIL = "oliver.rindholt@gmail.com";
+
+export const THEMES = {
+	orange: {
+		50: "#fff4ed",
+		100: "#ffe5d4",
+		200: "#ffc8a9",
+		300: "#ff9966",
+		400: "#fe6f39",
+		500: "#fc4913",
+		600: "#ed2f09",
+		700: "#c51f09",
+		800: "#9c1a10",
+		900: "#7e1810",
+		950: "#440906"
+	},
+	red: {
+		"50": "#fef3f2",
+		"100": "#ffe3e1",
+		"200": "#ffccc9",
+		"300": "#fea8a3",
+		"400": "#fc756d",
+		"500": "#f34940",
+		"600": "#dc281e",
+		"700": "#bd2118",
+		"800": "#9c1f18",
+		"900": "#821f1a",
+		"950": "#470b08"
+	},
+
+	blue: {
+		"50": "#f0f9fb",
+		"100": "#d9eff4",
+		"200": "#b8e1e9",
+		"300": "#87cad9",
+		"400": "#4fabc1",
+		"500": "#338fa7",
+		"600": "#2d748d",
+		"700": "#2b5f73",
+		"800": "#2c5364",
+		"900": "#274352",
+		"950": "#152b37"
+	},
+	green: {
+		"50": "#effaf4",
+		"100": "#d9f2e3",
+		"200": "#b6e4cb",
+		"300": "#87ceab",
+		"400": "#54b387",
+		"500": "#32976c",
+		"600": "#237a57",
+		"700": "#1c6047",
+		"800": "#184d39",
+		"900": "#153f30",
+		"950": "#0b231c"
+	}
+};
 
 export const EXPERIENCE: Experience[] = [
 	{

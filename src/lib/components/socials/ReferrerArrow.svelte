@@ -8,7 +8,7 @@
 
 <svg
 	class={cn(
-		"lg:group-hover/ref:translate-x-1/4 lg:group-hover/ref:-translate-y-1/4 lg:group-hover/ref:opacity-100 opacity-0 transition-all absolute top-full left-full block lg:group-hover/ref:stroke-orange-500 stroke-black",
+		"lg:group-hover/ref:translate-x-1/4 lg:group-hover/ref:-translate-y-1/4 lg:group-hover/ref:opacity-100 opacity-0 transition-all absolute top-full left-full block lg:group-hover/ref:stroke-primary-500 stroke-black",
 		$$restProps.class ?? ""
 	)}
 	fill="none"

@@ -9,13 +9,13 @@
 	let sliceThreshold = 4;
 </script>
 
-<Section title="Showcase" id="showcase" class="space-y-3">
+<Section title="Featured" id="featured" class="space-y-3">
 	<ul class="space-y-6">
 		{#each PROJECTS.slice(0, sliceThreshold) as project}
 			<Project {project} {language} />
 		{/each}
 	</ul>
-	<ReadMore>
+	<ReadMore as="ul" class="!mt-6">
 		{#each PROJECTS.slice(sliceThreshold) as project}
 			<Project {project} {language} />
 		{/each}

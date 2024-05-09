@@ -12,7 +12,7 @@
 <a
 	aria-label={social}
 	href={social}
-	class="lg:hover:text-orange-500 transition-colors duration-300 ease-in-out group/ref relative block"
+	class="lg:hover:text-primary-500 transition-colors duration-300 ease-in-out group/ref relative block"
 	target="_blank"
 	rel="noreferrer"
 >

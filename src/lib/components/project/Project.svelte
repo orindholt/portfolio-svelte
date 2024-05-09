@@ -21,7 +21,7 @@
 >
 	<Box
 		style="opacity: {isInViewport ? 1 : 0}; transform: translateY(-{isInViewport ? 0 : 50}px);"
-		class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md lg:hover:bg-opacity-100 transition-all ease-in-out duration-700 group/project h-full"
+		class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md transition-shadow ease-in-out duration-700 group/project h-full"
 	>
 		<div class="flex items-center justify-between gap-3 flex-wrap">
 			<h3 class="font-bold text-lg leading-none normal-case">{project.title}</h3>
@@ -47,7 +47,7 @@
 		<p class="text-gray-300 text-sm">{project.description}</p>
 		<div class="flex mt-auto gap-4">
 			{#if project.startDate}
-				<p class="font-medium text-sm text-orange-500">
+				<p class="font-medium text-sm text-primary-500">
 					Started ~ {dateString(project.startDate, language)}
 				</p>
 			{/if}
@@ -57,7 +57,7 @@
 						aria-label="Project repository"
 						href={project.repo}
 						target="_blank"
-						class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
+						class="text-gray-300 lg:hover:text-primary-500 transition-colors duration-300 ease-in-out"
 					>
 						<IconCode size={24} />
 					</a>
@@ -67,7 +67,7 @@
 						aria-label="Project link"
 						href={project.link}
 						target="_blank"
-						class="text-gray-300 lg:hover:text-orange-500 transition-colors duration-300 ease-in-out"
+						class="text-gray-300 lg:hover:text-primary-500 transition-colors duration-300 ease-in-out"
 					>
 						<IconLink size={24} />
 					</a>
