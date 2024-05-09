@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+		@apply transition-[background-color] duration-300 ease-in-out;
+	}
 	body {
-		@apply bg-black text-white font-unbounded scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500;
+		@apply bg-black text-white font-unbounded scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary-500;
 	}
 	body::after {
-		@apply block opacity-[0.025] -z-[1] fixed content-[""] -inset-[100vh];
+		@apply block opacity-[0.03] -z-[1] fixed content-[""] -inset-[100vh];
 		background-image: url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='125%25' height='125%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 	}
 	h2,

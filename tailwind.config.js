@@ -18,18 +18,18 @@ export default {
 				950: "#0f0f0f"
 			},
 			black: "#0a0a0a",
-			orange: {
-				50: "#fff4ed",
-				100: "#ffe5d4",
-				200: "#ffc8a9",
-				300: "#ff9966",
-				400: "#fe6f39",
-				500: "#fc4913",
-				600: "#ed2f09",
-				700: "#c51f09",
-				800: "#9c1a10",
-				900: "#7e1810",
-				950: "#440906"
+			primary: {
+				50: "var(--primary-50)",
+				100: "var(--primary-100)",
+				200: "var(--primary-200)",
+				300: "var(--primary-300)",
+				400: "var(--primary-400)",
+				500: "var(--primary-500)",
+				600: "var(--primary-600)",
+				700: "var(--primary-700)",
+				800: "var(--primary-800)",
+				900: "var(--primary-900)",
+				950: "var(--primary-950)"
 			},
 			transparent: "transparent",
 			inherit: "inherit",

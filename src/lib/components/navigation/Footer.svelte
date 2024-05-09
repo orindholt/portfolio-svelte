@@ -15,7 +15,7 @@
 			<SocialLink size={28} social={Socials.STACKOVERFLOW} />
 		</li>
 	</ul>
-	<a class="font-semibold lg:hover:text-orange-500 transition-colors" href="mailto:{CONTACT_EMAIL}"
+	<a class="font-semibold lg:hover:text-primary-500 transition-colors" href="mailto:{CONTACT_EMAIL}"
 		>{CONTACT_EMAIL}</a
 	>
 </footer>

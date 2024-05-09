@@ -32,7 +32,7 @@
 	<a
 		{href}
 		on:click|preventDefault={scrollIntoView}
-		class="w-full h-full lg:hover:text-orange-500 transition-colors flex justify-center"
+		class="w-full h-full lg:hover:text-primary-500 transition-colors flex justify-center"
 	>
 		<slot />
 	</a>
