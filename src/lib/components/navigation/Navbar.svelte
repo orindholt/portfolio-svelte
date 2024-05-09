@@ -24,7 +24,12 @@
 		<NavbarLink on:navigation={onNavigation} href="#top">Surface</NavbarLink>
 		<span class="opacity-20 max-md:hidden text-3xl">&#x2022;</span>
 		<NavbarLink on:navigation={onNavigation} href="#featured">Featured</NavbarLink>
-		<NavbarLink on:navigation={onNavigation} href="#top" class="max-md:hidden !flex-initial">
+		<NavbarLink
+			on:navigation={onNavigation}
+			href="#top"
+			class="max-md:hidden !flex-initial"
+			aria-label="Top"
+		>
 			<Logo width={40} height={40} />
 		</NavbarLink>
 		<NavbarLink on:navigation={onNavigation} href="#experience">Experience</NavbarLink>

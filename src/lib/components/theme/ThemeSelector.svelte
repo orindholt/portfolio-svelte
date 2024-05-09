@@ -38,7 +38,7 @@
 		{@const selected = currentTheme === theme}
 		<button
 			disabled={selected}
-			name={key}
+			aria-label="Change theme to {key}"
 			class="size-8 md:size-10 p-1.5 rounded-full lg:hover:opacity-100 opacity-50 lg:hover:scale-105 transition-all relative"
 			style="background: linear-gradient(145deg, {theme['600']}, {theme['500']}, {theme[
 				'400'

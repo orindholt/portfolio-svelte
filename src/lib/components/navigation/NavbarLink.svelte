@@ -31,6 +31,7 @@
 <li class={cn("relative group/link uppercase md:flex-1", $$restProps.class)}>
 	<a
 		{href}
+		{...$$restProps}
 		on:click|preventDefault={scrollIntoView}
 		class="w-full h-full lg:hover:text-primary-500 transition-colors flex justify-center"
 	>
