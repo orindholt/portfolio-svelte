@@ -1,9 +1,8 @@
 <script lang="ts">
 	import type { Theme } from "$lib/util/types";
-	import { IconCircleCheckFilled, IconCircle } from "@tabler/icons-svelte";
 	import { onMount } from "svelte";
-	import { THEMES } from "../../util/constants";
 	import { draw } from "svelte/transition";
+	import { THEMES } from "../../util/constants";
 
 	const duration = 500;
 	let mounted = false;
@@ -14,7 +13,7 @@
 			.map(([key, value]) => `--primary-${key}:${value}`)
 			.join(";");
 		currentTheme = theme;
-		document.documentElement.style.cssText = themeVariables;
+		document.body.style.cssText = themeVariables;
 	}
 
 	onMount(() => {
@@ -33,7 +32,7 @@
 	});
 </script>
 
-<div class="flex gap-3 md:gap-4 justify-center md:pb-12 max-md:fixed top-6 left-6 z-50">
+<div class="flex gap-3 md:gap-4 justify-center md:pb-12 max-md:absolute top-6 left-6 z-50">
 	{#each Object.entries(THEMES) as [key, theme]}
 		{@const selected = currentTheme === theme}
 		<button

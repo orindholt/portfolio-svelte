@@ -10,10 +10,14 @@
 </script>
 
 <Splide
+	label="Skills"
 	class="fade-mask w-full py-10 text-2xl"
 	options={{
 		drag: "free",
 		focus: "center",
+		snap: true,
+		lazyLoad: true,
+		updateOnMove: true,
 		arrows: false,
 		type: "loop",
 		autoWidth: true,
@@ -26,7 +30,7 @@
 	}}
 >
 	{#each Object.values(SKILLS) as skill}
-		<SplideSlide>
+		<SplideSlide aria-label={skill.name}>
 			<Skill {skill} />
 		</SplideSlide>
 	{/each}

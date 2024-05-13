@@ -21,7 +21,7 @@
 >
 	<Box
 		style="opacity: {isInViewport ? 1 : 0}; transform: translateY(-{isInViewport ? 0 : 50}px);"
-		class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md transition-shadow ease-in-out duration-700 group/project h-full"
+		class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md transition-all ease-in-out duration-700 group/project h-full"
 	>
 		<div class="flex items-center justify-between gap-3 flex-wrap">
 			<h3 class="font-bold text-lg leading-none normal-case">{project.title}</h3>
