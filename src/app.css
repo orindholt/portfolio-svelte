@@ -8,6 +8,17 @@
 	}
 	body {
 		@apply bg-black text-white font-unbounded scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary-500;
+		--primary-50: #fff4ed;
+		--primary-100: #ffe5d4;
+		--primary-200: #ffc8a9;
+		--primary-300: #ff9966;
+		--primary-400: #fe6f39;
+		--primary-500: #fc4913;
+		--primary-600: #ed2f09;
+		--primary-700: #c51f09;
+		--primary-800: #9c1a10;
+		--primary-900: #7e1810;
+		--primary-950: #440906;
 	}
 	body::after {
 		@apply block opacity-[0.03] -z-[1] fixed content-[""] -inset-[100vh];
@@ -35,15 +46,24 @@
 	.backing {
 		@apply after:bg-white lg:hover:after:-translate-x-1 lg:hover:after:-translate-y-1 before:bg-current lg:hover:before:translate-x-1 lg:hover:before:translate-y-1 lg:group-hover:translate-x-1 text-current;
 	}
-	.text-gradient {
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	.fade-mask {
-		mask: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
-	}
 }
 
 .splide__track {
-	@apply cursor-grab active:cursor-grabbing;
+	cursor: grab;
+}
+.splide__track:active {
+	cursor: grabbing;
+}
+.splide__slide * {
+	transition: all 0.3s ease-in-out;
+}
+.splide__slide.is-active * {
+	fill: var(--active-color);
+}
+.text-gradient {
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.fade-mask {
+	mask: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
 }

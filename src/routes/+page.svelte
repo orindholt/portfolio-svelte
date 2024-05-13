@@ -19,7 +19,7 @@
 <!-- <PointerFollower /> -->
 <div
 	id="top"
-	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page)/2)] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] relative pb-navbar flex flex-col items-center justify-center gap-8 text-center animate-fade-in"
+	class="min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page)/2)] md:min-h-[calc(100vh-theme(spacing.navbar)-theme(spacing.page))] pb-navbar flex flex-col items-center justify-center gap-8 text-center animate-fade-in"
 >
 	<div class="flex flex-col-reverse md:flex-col">
 		<ThemeSelector />
