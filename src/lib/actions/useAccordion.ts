@@ -1,8 +1,3 @@
-type Options = {
-	duration?: number;
-	ease?: string;
-};
-
 export default function accordion(node: HTMLElement, isOpen: boolean) {
 	const initialHeight = node.offsetHeight;
 	node.style.height = isOpen ? "auto" : "0";
