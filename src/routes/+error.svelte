@@ -1,6 +1,6 @@
 <script>
 	import { page } from "$app/stores";
-	import Button from "$lib/components/Button.svelte";
+	import Button from "$lib/components/ui/Button.svelte";
 
 	export let errorVisible = false;
 
@@ -15,9 +15,9 @@
 	{#if errorVisible}
 		<p aria-hidden>{$page.error?.message}</p>
 	{:else}
-		<button type="button" class="absolute bottom-0 left-0 opacity-10" on:click={showError}
-			>Show Error</button
-		>
+		<button type="button" class="absolute top-0 left-0 opacity-10" on:click={showError}>
+			Show Error
+		</button>
 	{/if}
 	<Button name="Home" href="/">Home</Button>
 </div>

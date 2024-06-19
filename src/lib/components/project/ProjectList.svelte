@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { PROJECTS } from "$lib/util/constants";
 	import type { PageData } from "../../../routes/$types";
-	import ReadMore from "../ReadMore.svelte";
-	import Section from "../Section.svelte";
+	import ReadMore from "../ui/ReadMore.svelte";
+	import Section from "../ui/Section.svelte";
 	import Project from "./Project.svelte";
 
 	export let language: PageData["language"];

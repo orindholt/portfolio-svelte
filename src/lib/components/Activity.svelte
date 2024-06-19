@@ -3,7 +3,7 @@
 	import { dateString } from "$lib/util/helpers";
 	import type { PageData } from "../../routes/$types";
 	import CountUp from "./CountUp.svelte";
-	import ToolTip from "./ToolTip.svelte";
+	import ToolTip from "./ui/ToolTip.svelte";
 
 	export let data: PageData["activityData"];
 	export let language: PageData["language"];
@@ -11,7 +11,7 @@
 </script>
 
 <!-- TODO: Add custom scroll bar -->
-{#if days?.length > 0}
+{#if days && days.length > 0}
 	<div class="w-full relative">
 		<h3 class="text-3xl flex flex-col absolute top-0 inset-x-0">
 			<span class="font-bold leading-none">

@@ -11,7 +11,7 @@
 
 <Splide
 	label="Skills"
-	class="fade-mask w-full py-10 text-2xl"
+	class="fade-mask w-full py-10 text-2xl animate-fade-in"
 	options={{
 		drag: "free",
 		focus: "center",
@@ -30,7 +30,11 @@
 	}}
 >
 	{#each Object.values(SKILLS) as skill}
-		<SplideSlide aria-label={skill.name}>
+		<SplideSlide
+			title={skill.name}
+			class="size-14 transition-transform duration-500 ease-in-out will-change-transform"
+			aria-label={skill.name}
+		>
 			<Skill {skill} />
 		</SplideSlide>
 	{/each}

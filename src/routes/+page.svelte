@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Activity from "$lib/components/Activity.svelte";
-	import Section from "$lib/components/Section.svelte";
+	import Section from "$lib/components/ui/Section.svelte";
 	import ExperienceList from "$lib/components/experience/ExperienceList.svelte";
 	import ToTop from "$lib/components/navigation/ToTop.svelte";
+	import ProgressBar from "$lib/components/ui/ProgressBar.svelte";
 	import ProjectList from "$lib/components/project/ProjectList.svelte";
 	import SkillScroll from "$lib/components/skills/SkillScroll.svelte";
 	import SocialLink from "$lib/components/socials/SocialLink.svelte";
@@ -15,6 +16,7 @@
 	EXPERIENCE.sort((a, b) => +b.startDate - +a.startDate);
 </script>
 
+<ProgressBar />
 <ToTop />
 <!-- <PointerFollower /> -->
 <div
@@ -36,8 +38,6 @@
 	<Activity data={data.activityData} language={data.language} />
 	<!-- <ScrollDown /> -->
 </div>
-<ProjectList language={data.language} />
-<ExperienceList language={data.language} />
 <Section title="About" id="bio" class="space-y-4 text-center">
 	<h3 class="font-bold text-4xl normal-case">
 		<span
@@ -47,8 +47,9 @@
 		</span>
 		Hello!<br />
 	</h3>
+	<p>A fullstack web developer based in Copenhagen</p>
 	<p>
-		I take pride in writing clean, readable, and reusable code that's easy to interpret and scale.
+		I take pride in writing clean, efficient, and readable code that's easy to interpret and scale.
 	</p>
 	<p>
 		I excel in learning new technologies and languages, documenting development processes, and
@@ -60,30 +61,6 @@
 		<b>quick learner</b>.
 	</p>
 	<SkillScroll />
-	<!-- TODO: Add instagram feed -->
-	<!-- <ReadMore>
-		<h3 class="font-semibold text-center text-xl my-4">Interesting things about me</h3>
-		<ul class="list-disc">
-			<li class="space-y-4">
-				<p>
-					I also make electronic music on the down-low. My go-to for music magic is Ableton. I play
-					around with synths, drum beats, and cool effects to shape my sound. feel free to check out
-					the stuff I put together on my <a
-						class="text-primary-500 lg:hover:text-opacity-80 transition-colors"
-						href="https://soundcloud.com/oliver-rindholt"
-						target="_blank">SoundCloud</a
-					>!
-				</p>
-				<iframe
-					title="Otherworldly Bouquets"
-					width="100%"
-					height="150"
-					scrolling="no"
-					frameborder="no"
-					allow="autoplay"
-					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1434511585&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-				/>
-			</li>
-		</ul>
-	</ReadMore> -->
 </Section>
+<ProjectList language={data.language} />
+<ExperienceList language={data.language} />

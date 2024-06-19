@@ -14,7 +14,7 @@ export default function accordion(node: HTMLElement, isOpen: boolean) {
 					{
 						height: initialHeight + "px",
 						opacity: 1,
-						overflow: "hidden"
+						overflow: "visible"
 					},
 					{
 						height: 0,

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { EXPERIENCE } from "$lib/util/constants";
 	import type { PageData } from "../../../routes/$types";
-	import Section from "../Section.svelte";
+	import Section from "../ui/Section.svelte";
 	import Experience from "./Experience.svelte";
 
 	export let language: PageData["language"];
