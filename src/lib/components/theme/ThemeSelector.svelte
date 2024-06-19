@@ -32,13 +32,13 @@
 	});
 </script>
 
-<div class="flex gap-3 md:gap-4 justify-center md:pb-12 max-md:absolute top-6 left-6 z-50">
+<div class="flex gap-3 md:gap-4 justify-center md:pb-12 max-md:absolute top-6 left-6 max-md:z-50">
 	{#each Object.entries(THEMES) as [key, theme]}
 		{@const selected = currentTheme === theme}
 		<button
 			disabled={selected}
 			aria-label="Change theme to {key}"
-			class="size-8 md:size-10 p-1.5 rounded-full lg:hover:opacity-100 opacity-50 lg:hover:scale-105 transition-all relative"
+			class="size-8 md:size-10 p-1.5 rounded-full md:hover:opacity-100 opacity-50 md:hover:scale-105 transition-all relative"
 			style="background: linear-gradient(145deg, {theme['600']}, {theme['500']}, {theme[
 				'400'
 			]}); {selected ? 'opacity: 1 !important; transform: scale(1) !important;' : ''}"

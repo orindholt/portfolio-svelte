@@ -33,11 +33,11 @@
 		{href}
 		{...$$restProps}
 		on:click|preventDefault={scrollIntoView}
-		class="w-full h-full lg:hover:text-primary-500 transition-colors flex justify-center"
+		class="w-full h-full md:hover:text-primary-500 transition-colors flex justify-center"
 	>
 		<slot />
 	</a>
 	<div
-		class="absolute -bottom-2 inset-x-0 h-0.5 bg-gray-normal mx-auto transition-all w-0 lg:group-hover/link:w-full ease-in-out duration-300"
+		class="absolute -bottom-2 inset-x-0 h-0.5 bg-gray-normal mx-auto transition-all w-0 md:group-hover/link:w-full ease-in-out duration-300"
 	/>
 </li>

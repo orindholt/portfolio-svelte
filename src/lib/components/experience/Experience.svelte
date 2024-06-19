@@ -22,7 +22,7 @@
 			<a
 				target="_blank"
 				href={data.companyLink}
-				class="font-normal text-primary-500 lg:hover:opacity-50 transition-opacity group/ref relative inline-block"
+				class="font-normal text-primary-500 md:hover:opacity-50 transition-opacity group/ref relative inline-block"
 			>
 				{data.company}
 				<ReferrerArrow size={10} />

@@ -21,7 +21,7 @@
 				<a
 					href={Socials.GITHUB}
 					target="_blank"
-					class="lg:hover:text-primary-500 transition-colors"
+					class="md:hover:text-primary-500 transition-colors"
 				>
 					Github
 				</a>

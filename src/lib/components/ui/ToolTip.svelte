@@ -5,7 +5,7 @@
 <div {...$$restProps} class={cn("relative group/tip", $$restProps.class ?? "")}>
 	<slot />
 	<div
-		class="absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-fit pt-1 lg:group-hover/tip:opacity-100 opacity-0 lg:group-hover/tip:translate-y-0 -translate-y-1.5 transition-all duration-300 ease-in-out pointer-events-none z-10"
+		class="absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-fit pt-1 md:group-hover/tip:opacity-100 opacity-0 md:group-hover/tip:translate-y-0 -translate-y-1.5 transition-all duration-300 ease-in-out pointer-events-none z-10"
 	>
 		<div class="bg-black rounded-md py-2 px-4 text-white">
 			<slot name="tip" />

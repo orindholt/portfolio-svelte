@@ -17,7 +17,7 @@
 {#if y > 50}
 	<button
 		type="button"
-		class="fixed bottom-[calc(theme(spacing.page)/2)] right-[calc(theme(spacing.page)/2)] md:bottom-page md:right-page lg:hover:scale-105 lg:active:scale-100 transition-transform text-primary-500 z-50"
+		class="fixed bottom-[calc(theme(spacing.page)/2)] right-[calc(theme(spacing.page)/2)] md:bottom-page md:right-page md:hover:scale-105 md:active:scale-100 transition-transform text-primary-500 z-50"
 		on:click={scrollToTop}
 	>
 		<svg

@@ -14,7 +14,7 @@
 </script>
 
 <ViewportFade as="li">
-	<Card class="flex flex-col gap-4 shadow-sm lg:hover:shadow-md group/project h-full">
+	<Card class="flex flex-col gap-4 shadow-sm md:hover:shadow-md group/project h-full">
 		<div class="flex items-center justify-between gap-3 flex-wrap">
 			<h3 class="font-bold text-lg leading-none normal-case">{project.title}</h3>
 			<ul class="flex flex-wrap gap-2">
@@ -49,7 +49,7 @@
 						aria-label="Project repository"
 						href={project.repo}
 						target="_blank"
-						class="text-gray-300 lg:hover:text-primary-500 transition-colors duration-300 ease-in-out"
+						class="text-gray-300 md:hover:text-primary-500 transition-colors duration-300 ease-in-out"
 					>
 						<IconCode size={24} />
 					</a>
@@ -59,7 +59,7 @@
 						aria-label="Project link"
 						href={project.link}
 						target="_blank"
-						class="text-gray-300 lg:hover:text-primary-500 transition-colors duration-300 ease-in-out"
+						class="text-gray-300 md:hover:text-primary-500 transition-colors duration-300 ease-in-out"
 					>
 						<IconLink size={24} />
 					</a>

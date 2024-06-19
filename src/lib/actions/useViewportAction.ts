@@ -13,7 +13,7 @@ const initializeIob = () => {
 			});
 		},
 		{
-			rootMargin: "-200px 0px"
+			rootMargin: "-100px 0px"
 		}
 	);
 };
