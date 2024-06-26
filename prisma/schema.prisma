@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Skill {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  icon      String
+  Project   Project? @relation(fields: [projectId], references: [id])
+  projectId String?
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  excerpt     String?
+  previewUrl  String?
+  codebaseUrl String?
+  startDate   DateTime
+  skills      Skill[]
+  company     Company? @relation(fields: [companyId], references: [id])
+  companyId   String?
+}
+
+model Company {
+  id          String       @id @default(cuid())
+  name        String
+  logo        String?
+  location    String
+  description String?
+  Project     Project[]
+  Experience  Experience[]
+}
+
+model Experience {
+  id          String    @id @default(cuid())
+  title       String
+  location    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String?
+  company     Company?  @relation(fields: [companyId], references: [id])
+  companyId   String?
+}
+
+model Email {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  senderEmail String
+  senderName  String?
+  subject     String?
+  message     String?
+}

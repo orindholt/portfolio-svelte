@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Socials } from "$lib/util/constants";
-	import { IconBrandGithub, IconBrandLinkedin, IconBrandStackoverflow } from "@tabler/icons-svelte";
+	import StackOverflowLogo from "phosphor-svelte/lib/StackOverflowLogo";
+	import GithubLogo from "phosphor-svelte/lib/GithubLogo";
+	import LinkedinLogo from "phosphor-svelte/lib/LinkedinLogo";
 	import ReferrerArrow from "./ReferrerArrow.svelte";
 
 	export let social: Socials;
@@ -18,10 +20,10 @@
 >
 	<ReferrerArrow class="left-3/4" size={arrowSize} />
 	{#if social === Socials.GITHUB}
-		<IconBrandGithub size={32} />
+		<GithubLogo size={32} />
 	{:else if social === Socials.LINKEDIN}
-		<IconBrandLinkedin size={32} />
+		<LinkedinLogo size={32} />
 	{:else if social === Socials.STACKOVERFLOW}
-		<IconBrandStackoverflow size={32} />
+		<StackOverflowLogo size={32} />
 	{/if}
 </a>

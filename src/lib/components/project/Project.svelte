@@ -1,16 +1,15 @@
 <script lang="ts">
-	import viewport from "$lib/actions/useViewportAction";
 	import ToolTip from "$lib/components/ui/ToolTip.svelte";
-	import type { Project } from "$lib/util/types";
-	import { IconCode, IconLink } from "@tabler/icons-svelte";
-	import Card from "../ui/Card.svelte";
-	import type { PageData } from "../../../routes/$types";
 	import { dateString } from "$lib/util/helpers";
+	import type { Project } from "$lib/util/types";
+	import CodeBlock from "phosphor-svelte/lib/CodeBlock";
+	import Link from "phosphor-svelte/lib/Link";
+	import type { PageData } from "../../../routes/$types";
+	import Card from "../ui/Card.svelte";
 	import ViewportFade from "../ui/ViewportFade.svelte";
 
 	export let project: Project;
 	export let language: PageData["language"];
-	let isInViewport: boolean = false;
 </script>
 
 <ViewportFade as="li">
@@ -51,7 +50,7 @@
 						target="_blank"
 						class="text-gray-300 md:hover:text-primary-500 transition-colors duration-300 ease-in-out"
 					>
-						<IconCode size={24} />
+						<CodeBlock size={24} />
 					</a>
 				{/if}
 				{#if project.link}
@@ -61,7 +60,7 @@
 						target="_blank"
 						class="text-gray-300 md:hover:text-primary-500 transition-colors duration-300 ease-in-out"
 					>
-						<IconLink size={24} />
+						<Link size={24} />
 					</a>
 				{/if}
 			</div>

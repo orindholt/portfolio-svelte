@@ -1,6 +1,7 @@
 <script lang="ts">
 	import accordion from "$lib/actions/useAccordion";
-	import { IconMinus, IconPlus } from "@tabler/icons-svelte";
+	import Minus from "phosphor-svelte/lib/Minus";
+	import Plus from "phosphor-svelte/lib/Plus";
 	import Button from "./Button.svelte";
 
 	export let toggled: boolean = false;
@@ -24,9 +25,9 @@
 		on:click={toggle}
 	>
 		{#if toggled}
-			<IconMinus stroke="3" size="1.25em" />
+			<Minus size={32} />
 		{:else}
-			<IconPlus stroke="3" size="1.25em" />
+			<Plus size={32} />
 		{/if}
 	</Button>
 </svelte:element>
