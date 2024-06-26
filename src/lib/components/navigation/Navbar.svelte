@@ -16,7 +16,7 @@
 </script>
 
 <nav
-	class="h-navbar sticky top-0 inset-x-0 z-50 px-6 md:px-4 max-w-6xl w-full mx-auto flex items-center max-md:justify-end md:bg-gradient-to-b from-black to-transparent"
+	class="h-navbar sticky top-0 inset-x-0 z-50 px-6 max-w-6xl w-full mx-auto flex items-center max-md:justify-end md:bg-gradient-to-b from-black to-transparent"
 >
 	<ul
 		class="flex max-md:flex-col items-center max-md:justify-center max-md:gap-12 flex-1 max-md:fixed max-md:inset-0 max-md:transition-transform max-md:duration-500 max-md:ease-in-out max-md:bg-black max-md:bg-opacity-90 max-md:backdrop-blur-sm md:text-base text-4xl {isOpen
